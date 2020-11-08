@@ -136,7 +136,7 @@ const Payment = () => {
                   value={getBasketTotal(basket)}
                   displayType={'text'}
                   thousandSeparator={true}
-                  prefix={'$'}
+                  prefix={'₹'}
                 />
                 <button disabled={processing || disabled || succeeded}>
                   <span>{processing ? 'Processing' : 'Buy Now'}</span>
