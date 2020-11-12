@@ -3,9 +3,9 @@ import './Product.css';
 import React from 'react';
 import { useStateValue } from './StateProvider';
 
-function Product({ id, title, image, price, rating, height }) {
+const Product = ({ id, title, image, price, rating, height }) => {
   //eslint-disable-next-line
-  const [{ basket }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   const addToBasket = () => {
     // dispatch the item into the data layer
@@ -45,6 +45,6 @@ function Product({ id, title, image, price, rating, height }) {
       <button onClick={addToBasket}>Add to Basket</button>
     </div>
   );
-}
+};
 
 export default Product;

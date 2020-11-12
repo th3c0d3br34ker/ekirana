@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
 import './Login.css';
+
 import { Link, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+
 import { auth } from './firebase';
 
-function Login() {
+const Login = () => {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -78,6 +80,6 @@ function Login() {
       </div>
     </div>
   );
-}
+};
 
 export default Login;

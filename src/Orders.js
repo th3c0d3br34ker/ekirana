@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { db } from './firebase';
 import './Orders.css';
-import { useStateValue } from './StateProvider';
+
+import React, { useEffect, useState } from 'react';
+
 import Order from './Order';
+import { db } from './firebase';
+import { useStateValue } from './StateProvider';
 
 function Orders() {
   //eslint-disable-next-line

@@ -6,24 +6,20 @@ import { getBasketTotal } from './reducer';
 import { useHistory } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 
-function Subtotal() {
+const Subtotal = () => {
   const history = useHistory();
-  //eslint-disable-next-line
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   return (
     <div className="subtotal">
       <CurrencyFormat
         renderText={(value) => (
-          <>
-            <p>
-              {/* Part of the homework */}
-              Subtotal ({basket.length} items): <strong>{value}</strong>
-            </p>
-          </>
+          <p>
+            Subtotal ({basket.length} items): <strong>{value}</strong>
+          </p>
         )}
         decimalScale={2}
-        value={getBasketTotal(basket)} // Part of the homework
+        value={getBasketTotal(basket)}
         displayType={'text'}
         thousandSeparator={true}
         prefix={'₹'}
@@ -34,6 +30,6 @@ function Subtotal() {
       </button>
     </div>
   );
-}
+};
 
 export default Subtotal;
